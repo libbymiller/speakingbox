@@ -4,7 +4,7 @@ Description=Classify Image Server
 [Service]
 Type=simple
 WorkingDirectory=/home/pi/
-ExecStart=/home/pi/env/bin/python3 classify_image_server.py
+ExecStart=/home/pi/env/bin/python3 -u classify_image_server.py
 Restart=on-failure
 StandardOutput=syslog
 SyslogIdentifier=image_server

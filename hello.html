@@ -1,0 +1,48 @@
+<html>
+<body>
+
+<p>Here are some notes on the set up and some hints.</p>
+
+<p>What I did to install it is in <a href="https://github.com/libbymiller/speakingbox">github</a>.
+
+<p>The tensorflow machine learning part is in <code>classify_image_server.py</code> in the <code>/home/pi/</code> 
+directory, but you most likely don't need to touch that part.</p>
+
+<p>You might like to edit <code>classify_image_client.py</code> which handles the button press and talks to the 
+<code>classify_image_server.py</code> via http on port 8080</p>
+
+<p>buttons.py shows you a different way of talking to the buttons. There's more information about the phatbeat 
+library in <a href="http://docs.pimoroni.com/phatbeat/">the phatbeat docs</a> - you can also use it to set the 
+led pixels too, as well as the buttons.
+
+<p><code>classify-image-server.service</code> and <code>classify-image-client.service</code> are just a way of 
+making it start automatically. More details about that are at the end of <a 
+href="https://github.com/libbymiller/speakingbox/blob/master/README.md">the installation README file</a>.</p>
+
+<p>If you want to change it, make edits to <code>classify_image_client.py</code> and then restart the client:</p>
+
+<p><code>sudo systemctl restart classify-image-client.service</code></p>
+
+<p>To restart the server (which you probably don't want to do unless it starts saying the same thing over and over 
+again), do:</p>
+
+<p><code>sudo systemctl restart classify-image-server.service</code></p>
+
+<p>you can also do sudo systemctl stop [service] or sudo systemctl start [service]</p>
+
+<p>If you have trouble look in the system logs, e.g.</p>
+
+<p><code>tail -f /var/log/syslog</code></p>
+
+<p>and you can always reboot it: <code>sudo reboot</code>.</p>
+
+<p>If you see stuff in the logs about the camera not being connected, check that the connector is correctly in the 
+pi, with the blue part facing the ethernet port, and that the tiny connector on the camera has not become 
+disconnected.</p>
+
+<p>Your last image (taken when you press the button) is camlive.jpg<p>
+
+<img src="speakingbox.jpg" />
+
+</body>
+</html>

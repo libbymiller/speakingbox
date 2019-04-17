@@ -140,6 +140,10 @@ pip3 install requests
 sudo cp classify-image-server.service /lib/systemd/system/classify-image-server.service
 sudo systemctl enable classify-image-server.service
 sudo systemctl start classify-image-server.service
+
+sudo cp classify-image-client.service /lib/systemd/system/classify-image-client.service
+sudo systemctl enable classify-image-client.service
+sudo systemctl start classify-image-client.service
 ```
 ## install pulse
 

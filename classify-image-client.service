@@ -4,7 +4,7 @@ Description=Classify Image Client
 [Service]
 Type=simple
 WorkingDirectory=/home/pi/
-ExecStart=/home/pi/env/bin/python3 classify_image_client.py
+ExecStart=/home/pi/env/bin/python3 -u classify_image_client.py
 Restart=on-failure
 StandardOutput=syslog
 SyslogIdentifier=image_client
