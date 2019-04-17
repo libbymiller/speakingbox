@@ -1,0 +1,16 @@
+[Unit]
+Description=Classify Image Client
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pi/
+ExecStart=/home/pi/env/bin/python3 classify_image_client.py
+Restart=on-failure
+StandardOutput=syslog
+SyslogIdentifier=image_client
+Type=idle
+User=pi
+
+[Install]
+WantedBy=multi-user.target
+
