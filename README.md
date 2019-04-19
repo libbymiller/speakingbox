@@ -67,7 +67,7 @@ sudo apt install python3-dev python3-pip
 sudo apt install libatlas-base-dev -y
 ```
 
-Give it enough swap to compile
+Give it enough swap to compile numpy
 
 ```sudo nano /etc/dphys-swapfile```
 
