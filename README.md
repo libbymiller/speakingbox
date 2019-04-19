@@ -147,7 +147,7 @@ classify_image_server.py
 classify-image-client.service
 classify-image-server.service
 pulseaudio.service
-install_pulse.sh
+install_pulseaudio.sh
 ```
 
 ## Install dependencies
@@ -170,7 +170,7 @@ sudo systemctl start classify-image-client.service
 ```
 ## Install pulseaudio as a user
 
-```sudo ./install.sh```
+```sudo ./install_pulseuadio.sh```
 
 
 ## Restart
