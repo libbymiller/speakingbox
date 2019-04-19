@@ -31,11 +31,11 @@ network={
 
 Eject and put the SD card in the pi. Attach the camera and phatbeat and button if using it.
 
-## update
+## Update
 
 ```sudo apt-get update```
 
-## enable camera
+## Enable camera
 
 ```sudo raspi-config``` # and enable camera
 
@@ -56,11 +56,11 @@ dtoverlay=hifiberry-dac
 
 reboot
 
-## test audio
+## Test audio
 
 ```aplay /usr/share/sounds/alsa/Front_Center.wav```
 
-## install tensorflow
+## Install tensorflow
 
 ```
 sudo apt install python3-dev python3-pip
@@ -76,25 +76,30 @@ contents:
 CONF_SWAPSIZE=1024
 ```
 
-### install virtualenv
+### Install virtualenv
 
 ```
 sudo pip install virtualenv
 virtualenv -p python3 env
+```
+
+### Install numpy
+
+```
 cd env/
 source bin/activate
 pip3 install numpy
 ```
 
-(lots of errors but does seem to work)
+(lots of errors but does seem to work: try it again if it doesn't work first time)
 
 ```pip3 install tensorflow```
 
-## Test it
+## Test tensorflow
 
 ```python3 -c "import tensorflow as tf; tf.enable_eager_execution(); print(tf.reduce_sum(tf.random_normal([1000, 1000])))"```
 
-## get imagenet
+## Get imagenet
 
 ```cd
 git clone https://github.com/tensorflow/models.git
@@ -112,7 +117,7 @@ sudo apt-get install libqtgui4
 sudo apt-get install libqt4-test
 ```
 
-test opencv
+Test opencv
 
 ```python3 -c 'import cv2; print(cv2.__version__)'```
 
@@ -131,7 +136,9 @@ sudo apt-get install libttspico-utils
 
 ```/usr/bin/pico2wave -w test.wav hello | mplayer test.wav```
 
-## scp or clone the following to your device
+## Get the server and client files
+
+scp or clone the following to your device
 
 ```
 buttons.py
@@ -161,7 +168,7 @@ sudo cp classify-image-client.service /lib/systemd/system/classify-image-client.
 sudo systemctl enable classify-image-client.service
 sudo systemctl start classify-image-client.service
 ```
-## Install pulse as a user
+## Install pulseaudio as a user
 
 ```sudo ./install.sh```
 
@@ -172,9 +179,6 @@ sudo systemctl start classify-image-client.service
 
 Wait a minute or two for it to start. 
 Press the playpause button on the phatbeat to get it to capture an image.
-
-
-
 
 
 
