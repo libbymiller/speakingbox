@@ -1,16 +1,18 @@
-# A speaking box using imagenet
+# A speaking box using imagenet and tensorflow
 
 <img src="speakingbox.jpg" width="500px" />
 
-## Burn a card with Etcher.
+## Burn an SD card 
+
+I used <a href="https://www.balena.io/etcher/">Etcher</a>.
 
 (Assuming a Mac) Enable ssh
 
-touch /Volumes/boot/ssh
+```touch /Volumes/boot/ssh```
 
 ## Put a wifi password in
 
-nano /Volumes/boot/wpa_supplicant.conf
+```nano /Volumes/boot/wpa_supplicant.conf```
 
 ```
 country=GB
@@ -25,21 +27,25 @@ network={
 
 ## Put the card in the pi
 
-eject and put it in the pi
+Eject and put the SD card in the pi
 
 ## update
 
-sudo apt-get update
+```sudo apt-get update```
 
 ## enable camera
 
-sudo raspi-config # and enable camera
+```sudo raspi-config``` # and enable camera
 
-change name
+## Change the name
 
-## fix the audio
+in /etc/hosts and /etc/hostname
 
-sudo nano /boot/config.txt
+## Fix the audio
+
+I used a <a href="https://shop.pimoroni.com/products/phat-beat">Phatbeat</a>
+
+```sudo nano /boot/config.txt```
 
 Disable on-board audio by commenting out dtparam=audio=on:
 
@@ -59,9 +65,11 @@ reboot
 ```
 sudo apt install python3-dev python3-pip
 sudo apt install libatlas-base-dev -y
-
-sudo nano /etc/dphys-swapfile
 ```
+
+Give it enough swap to compile
+
+```sudo nano /etc/dphys-swapfile```
 
 contents:
 ```
@@ -96,30 +104,34 @@ and test it
 
 ```python3 classify_image.py```
 
-## install openCV
+## Install openCV
 
 ```pip3 install opencv-python
 sudo apt-get install libjasper-dev
 sudo apt-get install libqtgui4
-sudo apt-get install libqt4-test```
+sudo apt-get install libqt4-test
+```
 
 test opencv
 
 ```python3 -c 'import cv2; print(cv2.__version__)'```
 
-## install the pieces for talking to the camera
+## Install the pieces for talking to the camera
 
-```pip3 install imutils picamera
+```pip3 install imutils picamera```
 
+...and for speaking
+
+```
 sudo apt-get install mplayer
 sudo apt-get install libttspico-utils
 ```
 
-## test audio file generation
+## Test audio file generation
 
 ```/usr/bin/pico2wave -w test.wav hello | mplayer test.wav```
 
-## scp the following to your device
+## scp or clone the following to your device
 
 ```
 buttons.py
@@ -131,12 +143,16 @@ pulseaudio.service
 install_pulse.sh
 ```
 
-## install dependencies
+## Install dependencies
 
 ```pip3 install flask
 pip3 install phatbeat
 pip3 install requests
+```
 
+## Make them run automatically
+
+```
 sudo cp classify-image-server.service /lib/systemd/system/classify-image-server.service
 sudo systemctl enable classify-image-server.service
 sudo systemctl start classify-image-server.service
@@ -145,7 +161,7 @@ sudo cp classify-image-client.service /lib/systemd/system/classify-image-client.
 sudo systemctl enable classify-image-client.service
 sudo systemctl start classify-image-client.service
 ```
-## install pulse
+## Install pulse as a user
 
 ```sudo ./install.sh```
 
