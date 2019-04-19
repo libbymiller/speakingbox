@@ -170,7 +170,7 @@ sudo systemctl start classify-image-client.service
 Wait a minute or two for it to start. 
 Press the playpause button on the phatbeat to get it to capture an image.
 
-You can use a <a href="https://shop.pimoroni.com/products/mini-black-hat-hack3r?variant=19448025991">black hat hacker</a> (or some nifty soldering) to add a <a href="https://shop.pimoroni.com/?q=mini%20arcade%20buttons">more interesting button</a. as in the image above (which also uses a <a href="https://sistemaplastics.com/products/klip-it-utility/900ml-cracker">Systema Klip-it 900mm</a> with laser-cut holes and <a href="https://shop.pimoroni.com/products/3-speaker-4-3w">this speaker</a> which fits exactly in the bottom). 
+You can use a <a href="https://shop.pimoroni.com/products/mini-black-hat-hack3r?variant=19448025991">black hat hacker</a> (or some nifty soldering) to add a <a href="https://shop.pimoroni.com/?q=mini%20arcade%20buttons">more interesting button</a>. as in the image above (which also uses a <a href="https://sistemaplastics.com/products/klip-it-utility/900ml-cracker">Systema Klip-it 900mm</a> with laser-cut holes and <a href="https://shop.pimoroni.com/products/3-speaker-4-3w">this speaker</a> which fits exactly in the bottom). 
 
 
 
