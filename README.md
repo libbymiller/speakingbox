@@ -2,6 +2,8 @@
 
 <img src="speakingbox.jpg" width="500px" />
 
+I didn't do anything original here - it's a matter of installation of libraries and assembling of kit!
+
 I used a Raspberry Pi 3 with a <a href="https://shop.pimoroni.com/products/phat-beat">Phatbeat</a> and a <a href="https://shop.pimoroni.com/products/mini-black-hat-hack3r?variant=19448025991">black hat hacker</a> (I could have used <a href="https://shop.pimoroni.com/products/adafruit-stacking-header-for-raspberry-pi-2x13-extra-tall">stacking headers</a> on the phatbeat) in order to add a <a href="https://shop.pimoroni.com/?q=mini%20arcade%20buttons">more interesting button</a> as in the image above (you can also just use the built-in buttons on the phatbeat). I also used a <a href="https://sistemaplastics.com/products/klip-it-utility/900ml-cracker">Systema Klip-it 900mm</a> with laser-cut holes for the button and speaker and camera and <a href="https://shop.pimoroni.com/products/3-speaker-4-3w">this speaker</a> which fits exactly in the bottom of the Klip-it. I got an <a href="https://groceries.asda.com/product/phone-accessories/onn-black-3350mah-power-bank/1000042036382">ONN Black 3350MAH Power Bank battery (£4) from Asda</a> which fits in the box at a slight angle and will power it for a few hours.
 
 ## Burn an SD card 
