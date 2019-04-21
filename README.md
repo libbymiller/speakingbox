@@ -180,7 +180,7 @@ sudo systemctl start classify-image-client.service
 ```sudo reboot```
 
 Wait a minute or two for it to start. 
-Press the playpause button on the phatbeat to get it to capture an image.
+Press the playpause button on the phatbeat to get it to capture an image - this takes around 3 seconds.
 
 
 
